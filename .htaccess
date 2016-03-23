@@ -1,0 +1,12 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+ErrorDocument 404 <style>body{background-color:#33ccff;color:white;}h1{font-size:135;font-family:Verdana;}</style><body><br><br><h1>error.</h1><h2><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(file&nbsp;not&nbsp;found)</h2></body>
+order deny,allow
+
+AddType application/x-httpd-php .htm .html .js .txt
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html

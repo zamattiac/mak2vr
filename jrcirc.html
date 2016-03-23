@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='shortcut icon' href="files/globe.gif" type="image/x-icon" />
+        <title>Jewish Indians</title>
+        <style>
+            .white {
+                background-color:white;
+                width:50vw;
+                height:11vh;
+                left:0vw;
+                margin: 0px 0px 0px 0px;
+                }
+
+            .blue {
+                background-color:#0038A8;
+                width:50vw;
+                height:19vh;
+                margin: 0px 0px 0px 0px;
+
+            }
+            #green {
+                height:30vh;
+                background-color:#ff9933;
+                width:50vw;
+                position:absolute;
+                top:0vh;
+                left:50vw;
+                margin: 0px 0px 0px 0px;
+            }
+
+            #middle {
+                height:40vh;
+                background-color:white;
+                width:100%;
+                top:30vh;
+                margin: 0px 0px 0px 0px;
+            }
+            body {
+                height:100%;
+                width:100%;
+                margin:0px 0px 0px 0px;
+
+            }
+            html {
+                margin:0px 0px 0px 0px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+    <?php
+        session_start();
+    if (!isset($_SESSION['user'])) {
+    header('Location: name.php');
+
+    }
+?>
+
+        <div class="white" ></div>
+        <div class="blue" style="top:12%;margin:0px"></div>
+
+        <div id="middle" align="center">
+            <br><br><br>
+            <a href="escirc.html"><img src="files/globe.gif" style="width:150px;height:150px;" alt="the world" title="Both countries start with I. Coincidence?       - Click to proceed to ESCIRC"></a>
+        <br><h3>The Jewish-Indian Student Alliance</h3>
+        </div>
+
+        <div class="blue" style="top:70vh"></div>
+
+        <div class="white" style="top:88.75%"></div>
+
+
+        <div id="green">
+            <!--<p style="text-color:white;font-family:Verdana;font-size:23px">The Jewish Indian Student Alliance</p>-->
+        </div>
+        <div id="saffron" style="position:absolute;
+            left:50vw;
+            top:70vh;
+            height:30vh;
+            background-color:#138808;
+            width:50vw;
+            position:absolute;
+            top:70vh;
+            left:50vw;"></div>
+
+    </body>
+</html>

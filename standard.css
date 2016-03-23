@@ -1,0 +1,92 @@
+table {
+    header
+    text-align:center;
+    font-weight:bold;
+    }
+
+th {
+    font-size:20;
+    }
+
+.penis {
+    text-align:left;
+    color:#99CCFF;
+    }
+
+.vagina {
+    text-align:center;
+    color:#FF99FF;
+    bg-color;light pink;}
+
+.butt {
+    text-align:right;
+    color:#904800;
+    }
+
+.underline {
+    text-decoration:underline;
+
+    }
+
+p {
+    padding:20px 20px;
+    padding-left:0px;
+    padding-right:0px;
+    text-indent:50px;
+    line-height:30px;
+    text-align:center;
+    }
+h1 {
+    padding:20px 20px;
+    padding-left:40px;
+    padding-right:40px;
+    text-indent:50px;
+    line-height:30px;
+    text-align:center;
+    }
+h2 {
+    padding:40px 40px;
+    padding-left:40px;
+    padding-right:40px;
+    text-indent:50px;
+    line-height:100px;
+    text-align:center;
+    }
+
+h3 {
+    padding:20px 20px;
+    padding-left:40px;
+    padding-right:40px;
+    text-indent:50px;
+    line-height:30px;
+    text-align:center;
+    }
+
+h4 {
+    padding:20px 20px;
+    padding-left:40px;
+    padding-right:40px;
+    text-indent:50px;
+    line-height:30px;
+    text-align:center;
+    }
+h5 {
+    padding:20px 20px;
+    padding-left:40px;
+    padding-right:40px;
+    text-indent:50px;
+    line-height:30px;
+    text-align:center;
+    }
+
+a {
+    text-decoration:none;
+
+    }
+
+#name {position: absolute; bottom: 0px;}
+
+body {
+    link:navy;
+    vlink:navy;
+    }

@@ -1,0 +1,249 @@
+<?php
+    session_start();
+    if (isset($_SESSION['user'])){
+    $user = $_SESSION['user'];
+    setcookie("username", $user, time()+660000);
+    setcookie("fishbowl", $user, time()+660000);
+    }
+
+    if (!isset($_SESSION['user'])) {
+    header('Location: name.php');
+    }
+?>
+
+<!DOCTYPE html>
+
+<html style="max-width:100vw;overflow-x:hidden;">
+    <head>
+        <title>ESCIRC Home</title>
+        <link rel="stylesheet" type="text/css" href="standard.css">
+        <link rel="stylesheet" type="text/css" href="escirc.css">
+        <!--scrolling:-->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+        <link rel='shortcut icon' href="files/icon.png" type="image/png" />
+        <!--<script src="snowstorm.js"></script>-->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="name.js"></script>
+        <script>
+            $(window).scroll(function() {
+
+    if ($(this).scrollTop()>0)
+     {
+        $('#scroll').fadeOut();
+        document.getElementById("header").style.width = "100vw";
+        document.getElementById("header").style.left = "0vw";
+        document.getElementById("header").style.top = "0vh";
+        document.getElementById("container").style.left = "35vw";
+        document.getElementById("header").style.opacity = ".9";
+
+
+     }
+    else
+     {
+      $('#scroll').fadeIn();
+      document.getElementById("header").style.width = "25vw";
+        document.getElementById("header").style.left = "4vw";
+        document.getElementById("header").style.top = "6vh";
+        document.getElementById("container").style.left = "18vw";
+        document.getElementById("header").style.opacity = "1";
+
+     }
+
+ });
+
+        </script>
+    </head>
+
+    <body onload="checkCookie()">
+
+        <header id="header">
+            the escirc
+            <div class="container" id="container" style="font-family:Verdana;">
+                <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+                <img src="files/hamburger.png" height="12vh">
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#jokes">Jokes</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#events">Events</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#names">Couples</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#discussion">Discussion Guidelines</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="poop.html">ESCIRC Journal</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="irc.html">IRC</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="jrcirc.html">JSCIRC</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="terminal.php">Site Access</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="messages.php">Messaging</a></li>
+                </ul></div>
+            </div>
+        </header>
+
+        <div>
+            <div id="menu">
+                <a href="#rules">rules</a><br>
+                <a href="#jokes">comedic jokes</a><br>
+                <a href="#events">events</a><br>
+                <a href="#names">couple names</a><br>
+                <a href="#discussion">discussion</a><br>
+            </div>
+            <img src="files/backgrounds/background.png" height="525" width="706" style="position:absolute;left:40vw;">
+        </div>
+
+        <div id="scroll">
+            <img src="files/scroll.png" style="width:50px;height:50px;align:center;">
+        </div>
+		<div id="footer">
+        	    at the <a href="jrcirc.html" id="jrcirc"> <font size="3">international royce jackson chabad house</font></a>
+            <div id="name"></div>
+        </div>
+
+        <div id="wrapper">
+
+            <div id="rules">
+                <h3 style="padding-bottom:2vh;padding-top:0vh;">Rules:</h3>
+                <h4>Don't tell Kelly Exhaust Port</h4>
+                <h5 style="padding-top:.11vh;">Robath can know</h5>
+                <h4 style="margin-bottom:0px">Michelle shut up! You're drunk! Go to bed!</h4>
+            </div>
+        	
+
+            <div id="jokes">
+                <h3>Hilarious Jokes</h3>
+                <p style="padding-left:550px;padding-top:50px"> > I have a friend named Poojer.</p>
+
+                <p style="padding-left:750px;">Poojer? Where is her?<br></p>
+
+                <p style="padding-left:100px;"> > Knock knock.</p>
+                <p style="padding-left:250px;">Who's there?</p>
+                <p style="padding-left:150px;">Do you have two CD's?</p>
+                <p style="padding-left:150px;">Do you have to see deez nuts?<br></p>
+                <p style="padding-left:600px;"> > Why Adele get in the prison</p>
+                <p style="padding-left:650px;">To say hello from the outside<br></p>
+
+                <p style="padding-left:300px;"> > Your integral is so very cool.</p>
+            </div>
+            <div id="events">
+                <h2>Upcoming events</h2>
+
+                <!--<h3 >Dating events:</h3>-->
+                        <!--<h4>International Relations</h4>-->
+                        <!--<h4>Study-A-Broad</h4>-->
+
+                <TABLE cellspacing="10px" style="margin-left:auto;margin-right:auto;">
+                    <!--<TR>-->
+                    <!--&lt;!&ndash;<TD COLSPAN="7" ALIGN=center><B>December 2001</B></TD>&ndash;&gt;-->
+                    <!--</TR>-->
+
+                    <TR style="height:50px;">
+                    <TD style="width:130px;" ALIGN=center>Sun</TD>
+                    <TD style="width:130px;" ALIGN=center>Mon</TD>
+                    <TD style="width:130px;" ALIGN=center>Tue</TD>
+                    <TD style="width:130px;" ALIGN=center>Wed</TD>
+                    <TD style="width:130px;" ALIGN=center>Thu</TD>
+                    <TD style="width:130px;" ALIGN=center>Fri</TD>
+                    <TD style="width:130px;" ALIGN=center>Sat</TD>
+                    </TR>
+                    <TR>
+                    <TD style="height:50px;" ALIGN=center></TD>
+                    <TD ALIGN=center></TD>
+                    <TD ALIGN=center></TD>
+                    <TD ALIGN=center></TD>
+                    <TD ALIGN=center></TD>
+                    <TD ALIGN=center></TD>
+                    <TD style="height:50px;" ALIGN=center>1</TD>
+                    </TR>
+                    <TR>
+                    <TD style="height:50px;" ALIGN=center>2</TD>
+                    <TD ALIGN=center>3</TD>
+                    <TD ALIGN=center>4</TD>
+                    <TD ALIGN=center>5</TD>
+                    <TD ALIGN=center bgcolor="#b3ffb3" title="Dartyling Tea">6</TD>
+                    <TD ALIGN=center>7</TD>
+                    <TD ALIGN=center>8</TD>
+                    </TR>
+                    <TR>
+                    <TD style="height:50px;" ALIGN=center>9</TD>
+                    <TD ALIGN=center>10</TD>
+                    <TD ALIGN=center bgcolor="#ffb3ec" title="Dating event : International Relations">11</TD>
+                    <TD ALIGN=center>12</TD>
+                    <TD ALIGN=center bgcolor="#99ff99" title="Dartyling Tea">13</TD>
+                    <TD ALIGN=center>14</TD>
+                    <TD ALIGN=center>15</TD>
+                    </TR>
+                    <TR>
+                    <TD style="height:50px;" ALIGN=center>16</TD>
+                    <TD ALIGN=center bgcolor="#ffb3ec" title="Dating event : Study-A-broad">17</TD>
+                    <TD ALIGN=center>18</TD>
+                    <TD ALIGN=center>19</TD>
+                    <TD ALIGN=center bgcolor="#80ff80" title="Dartyling Tea">20</TD>
+                    <TD ALIGN=center>21</TD>
+                    <TD ALIGN=center>22</TD>
+                    </TR>
+                    <TR>
+                    <TD style="height:50px;" ALIGN=center>23</TD>
+                    <TD ALIGN=center bgcolor="#b3e6ff" title="We beat up the nerds">24</TD>
+                    <TD ALIGN=center>25</TD>
+                    <TD ALIGN=center>26</TD>
+                    <TD ALIGN=center bgcolor="#66ff66" title="Dartyling Tea">27</TD>
+                    <TD ALIGN=center>28</TD>
+                    <TD ALIGN=center>29</TD>
+                    </TR>
+                    <TR>
+                    <TD style="height:50px;" ALIGN=center>30</TD>
+                    <TD style="height:50px;" ALIGN=center>31</TD>
+                    <TD style="height:50px;" ALIGN=center></TD>
+                    <TD style="height:50px;" ALIGN=center></TD>
+                    <TD style="height:50px;" ALIGN=center></TD>
+                    <TD style="height:50px;" ALIGN=center></TD>
+                    <TD style="height:50px;" ALIGN=center></TD>
+
+                    </TR>
+                    </TABLE>
+
+                <h4>For more information contact Michelle: 420-420-6969</h4>
+            </div>
+            <div id="names">
+                <p style="font-size:30px;position:absolute;left:30vw;color:#993300;">celebrity couple names</p>
+                <p>Maruno</p>
+                <p>Raheeko</p>
+                <p>Neehul</p>
+                <p>Party</p>
+			</div>
+            <div id="discussion">
+                <h3 style="color:#007399"><br><br>Inoffensive Terminology for Mature Discussion</h3>
+
+                <div id="table" style="margin-left:auto;margin-right:auto;">
+
+                    <table style="background-color:#ffffb3;margin-left:auto;margin-right:auto;width:20vw;border-collapse: separate;border-spacing: 70px 10px;text-size:25px;width:auto;text-align:left;">
+
+                        <tr><th class="penis" style="text-decoration:underline;padding-bottom:1vh;">Male terms</th><th class="vagina" style="text-decoration:underline;padding-bottom:1vh;">Female terms</th><th class="butt" style="text-decoration:underline;padding-bottom:1vh;">Backdoor Terms</th></tr>
+                        <!--<tr><th class="penis"></th><br><th class="vagina"><br></th><th class="butt"><br></th></tr>-->
+                        <tr><th class="penis"><br>Dickle<br></th><th class="vagina">Coochella</th><th class="butt">Bouttoir</th></tr>
+                        <tr><th class="penis"><br>Penoa/pinoit</th><th class="vagina">Vaginha</th><th class="butt">Bungelow</th></tr>
+                        <tr><th class="penis"><br>Peen</th><th class="vagina">Bagina</th><th class="butt">Bhungra-hole</th></tr>
+                        <tr><th class="penis"><br>Philip</th><th class="vagina">Vagine</th><th class="butt">Anise</th></tr>
+                        <tr><th class="penis"><br>Jimmy</th><th class="vagina">Vagine-machine</th><th class="butt">Poop-chute</th></tr>
+                        <tr><th class="penis"><br></th><th class="vagina">Vajayjay</th><th class="butt">Bunghole</th></tr>
+                        <tr><th class="penis"><br></th><th class="vagina"><br>University of Virgina</th><th class="butt">Berb's Buggers</th></tr>
+                        <tr><th class="penis"><br></th><th class="vagina"><br>Pooj</th><th class="butt"></th></tr>
+                        <tr><th class="penis"><br></th><th class="vagina"><br>Roberta Gwathmey</th><th class="butt"></th></tr>
+                    </table>
+                </div>
+                <h4>Further guidelines:</h4>
+                <h5>Rule 1: <font size="1">(there are no rules!)</font> Don't let Kelly Asscheeks know!</h5>
+                    <h5>Rule 2: <font size="1">(there are no rules!)</font> Michelle shut up!!</h5>
+            </div>
+
+
+        <div style="position:relative">
+            escirc, 2015
+        </div>
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,137 @@
+html {
+    max-width:100vw;
+    overflow-x:hidden;
+    font-family:Verdana;
+    }
+
+body {
+    background-color:blanchedalmond;
+    width:100vw;
+    background-size: 50vw;
+    max-width:100vw;
+    position:absolute;
+    top:6vh;
+
+}
+
+header {
+    padding:15px;
+    text-color:black;
+    font-size:45px;
+    font-family:Palatino;
+    background-color:#669900;
+    position:fixed;
+    z-index: 10;
+    left:4vw;
+
+    width:25vw;
+   }
+
+header.a:active {color:#86b300;}
+
+#container {
+    position:absolute;
+    left:18vw;
+    top:10%;
+}
+
+#menu {
+    position:absolute;
+    top:20vh;
+    left:7vw;
+    width:20vw;
+    padding-left:2%;
+    font-size:18px;
+    line-height:3.5;
+    font-style:italic;
+}
+
+#scroll {width:50px;
+    height:50px;
+    opacity:.8;position:absolute;left:15vw;top:500px;
+    }
+
+#footer {
+    padding:10px;
+    text-decoration:none;
+    font-family:Verdana;
+    background-color:#991f00;
+    position:absolute;
+    top:87vh;
+    width:100vw;
+}
+
+#name {
+    position:relative;
+    left:70vw;
+    bottom:3vh;
+}
+
+#jrcirc {color:gray;}
+#jrcirc:visited {color:gray;}
+
+#wrapper {
+position:absolute;
+top:91vh;
+width:100vw;
+padding: 0px 0px 0px 0px;
+margin:0px 0px 0px 0px;
+}
+
+#rules {
+    line-height:1.5;
+    background-color:#996633;
+    width:100vw;
+    padding-top:px;
+    padding:5vh;
+    margin-top:3vh;
+    margin-bottom:1vh;
+}
+
+h2 {margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;}
+
+p{
+    text-align:justify;
+    font-size:20px;
+    padding-left:15vw;
+    padding-right:15vw;
+    padding-bottom:1vh;
+}
+
+TD {
+padding: 15px;
+
+}
+
+#jokes {
+background-color:#ff6666;
+padding-bottom:5vh;
+padding-top:3vh;
+position:static;
+}
+
+#events {
+    background-color:#666633;
+    text-align:left;
+    padding:5vh;
+    padding-bottom:5vh;
+}
+
+#names {
+    background-color:#339933;
+    padding:7vh;
+    padding-left:30vh;
+}
+
+#discussion {
+    align:center;background-color:#ff0000;min-height:100vh;color:#0059b3;
+}
+
+table {
+padding-bottom:8vh;
+cell-padding:4vh;
+table-align:center;
+background-color: #80ff00;
+text-size:25px;
+}
+

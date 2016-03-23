@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html style="max-width:100vw;overflow-x:hidden;">
+
+<?php
+    session_start();
+    if (isset($_SESSION['normal'])){
+    $user = $_SESSION['normal'];
+    setcookie("normal", $user, time()+660000);
+    }
+
+    if (!isset($_SESSION['normal'])) {
+    $_SESSION['login'] = 'normal';
+    header('Location: name.php');
+    }
+?>
+
+    <head>
+        <title>Example Page</title>
+        <link rel="stylesheet" type="text/css" href="standard.css">
+        <link rel="stylesheet" type="text/css" href="escirc.css">
+        <!--scrolling:-->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+        <link rel='shortcut icon' href="files/icon.png" type="image/png" />
+
+        <style>
+
+
+
+
+
+
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="normalname.js"></script>
+
+        <script>
+
+            $(window).scroll(function() {
+
+    if ($(this).scrollTop()>0)
+     {
+        $('#scroll').fadeOut();
+        document.getElementById("header").style.width = "100vw";
+        document.getElementById("header").style.left = "0vw";
+        document.getElementById("header").style.top = "0vh";
+        document.getElementById("container").style.left = "35vw";
+        document.getElementById("header").style.opacity = ".9";
+
+
+     }
+    else
+     {
+      $('#scroll').fadeIn();
+      document.getElementById("header").style.width = "25vw";
+        document.getElementById("header").style.left = "4vw";
+        document.getElementById("header").style.top = "6vh";
+        document.getElementById("container").style.left = "18vw";
+        document.getElementById("header").style.opacity = "1";
+
+     }
+
+    });
+
+
+        </script>
+    </head>
+
+    <body vlink="black" link="black" onload="checkCookie()">
+
+        <header id="header">
+            welcome
+            <div class="container" id="container" style="font-family:Verdana;">
+                <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+                <img src="files/hamburger.png" height="12vh">
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#jokes">section 1</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#events">section 2</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#names">section 3</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#discussion">section 4</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="messages.php">messaging service</a></li>
+                </ul></div>
+            </div>
+        </header>
+
+        <div>
+            <div id="menu">
+                <a href="#rules">section 0</a><br>
+                <a href="#jokes">section 1</a><br>
+                <a href="#events">section 2</a><br>
+                <a href="#names">section 3</a><br>
+                <a href="#discussion">section 4</a><br>
+            </div>
+            <img src="files/backgrounds/rocks.jpg" height="500" width="756" style="position:absolute;left:35vw;">
+        </div>
+
+        <div id="scroll">
+            <img src="files/scroll.png" style="width:50px;height:50px;align:center;">
+        </div>
+		<div id="footer">
+        	    at the <a href="http://virginia.edu" id="jrcirc"> <font size="3">university of virginia</font></a>
+            <div id="name"></div>
+        </div>
+
+        <div id="wrapper">
+
+            <div id="rules">
+                <h3 style="padding-bottom:2vh;padding-top:0vh;">Welcome!</h3>
+                <h4>We are happy you are here!</h4>
+                <h4 style="margin-bottom:0px">Thanks for stopping by!</h4>
+            </div>
+        	
+
+            <div id="jokes">
+                <h3>Hilarious Jokes</h3>
+                <p style="padding-left:550px;padding-top:50px"> >Why was 6 afraid of 7?</p>
+
+                <p style="padding-left:685px;">DNE. Numbers are incapable of fear.<br></p>
+
+                <p style="padding-left:100px;"> > Knock knock.</p>
+                <p style="padding-left:250px;">Who's there?</p>
+                <p style="padding-left:150px;">Wa.</p>
+                <p style="padding-left:250px;">Wa who?</p>
+                <p style="padding-left:150px;">Wahoowa!<br></p>
+                <p style="padding-left:600px;"> > ['hip','hip']</p>
+                <p style="padding-left:650px;">Hip hip array!<br><br><br></p>
+
+                <p style="padding-left:250px;"> > Knowledge is knowing a tomato is a fruit; Wisdom is not putting it in a fruit salad.</p>
+            </div>
+            <div id="events">
+                <h2>Upcoming events</h2>
+
+                <!--<h3 >Dating events:</h3>-->
+                        <!--<h4>International Relations</h4>-->
+                        <!--<h4>Study-A-Broad</h4>-->
+
+                <TABLE cellspacing="10px" style="margin-left:auto;margin-right:auto;">
+                    <!--<TR>-->
+                    <!--&lt;!&ndash;<TD COLSPAN="7" ALIGN=center><B>December 2001</B></TD>&ndash;&gt;-->
+                    <!--</TR>-->
+
+                    <TR style="height:50px;">
+                    <TD style="width:130px;" ALIGN=center>Sun</TD>
+                    <TD style="width:130px;" ALIGN=center>Mon</TD>
+                    <TD style="width:130px;" ALIGN=center>Tue</TD>
+                    <TD style="width:130px;" ALIGN=center>Wed</TD>
+                    <TD style="width:130px;" ALIGN=center>Thu</TD>
+                    <TD style="width:130px;" ALIGN=center>Fri</TD>
+                    <TD style="width:130px;" ALIGN=center>Sat</TD>
+                    </TR>
+                    <TR>
+                    <TD style="height:50px;" ALIGN=center></TD>
+                    <TD ALIGN=center></TD>
+                    <TD ALIGN=center></TD>
+                    <TD ALIGN=center></TD>
+                    <TD ALIGN=center></TD>
+                    <TD ALIGN=center></TD>
+                    <TD style="height:50px;" ALIGN=center>1</TD>
+                    </TR>
+                    <TR>
+                    <TD style="height:50px;" ALIGN=center>2</TD>
+                    <TD ALIGN=center>3</TD>
+                    <TD ALIGN=center>4</TD>
+                    <TD ALIGN=center>5</TD>
+                    <TD ALIGN=center bgcolor="#b3ffb3" title="Piano lessons">6</TD>
+                    <TD ALIGN=center>7</TD>
+                    <TD ALIGN=center>8</TD>
+                    </TR>
+                    <TR>
+                    <TD style="height:50px;" ALIGN=center>9</TD>
+                    <TD ALIGN=center>10</TD>
+                    <TD ALIGN=center bgcolor="#ffb3ec" title="Soccer Practice">11</TD>
+                    <TD ALIGN=center>12</TD>
+                    <TD ALIGN=center bgcolor="#99ff99" title="Piano lessons">13</TD>
+                    <TD ALIGN=center>14</TD>
+                    <TD ALIGN=center>15</TD>
+                    </TR>
+                    <TR>
+                    <TD style="height:50px;" ALIGN=center>16</TD>
+                    <TD ALIGN=center bgcolor="#ffb3ec" title="Soccer Practice">17</TD>
+                    <TD ALIGN=center>18</TD>
+                    <TD ALIGN=center>19</TD>
+                    <TD ALIGN=center bgcolor="#80ff80" title="Piano lessons">20</TD>
+                    <TD ALIGN=center>21</TD>
+                    <TD ALIGN=center>22</TD>
+                    </TR>
+                    <TR>
+                    <TD style="height:50px;" ALIGN=center>23</TD>
+                    <TD ALIGN=center bgcolor="#b3e6ff" title="Open House">24</TD>
+                    <TD ALIGN=center>25</TD>
+                    <TD ALIGN=center>26</TD>
+                    <TD ALIGN=center bgcolor="#66ff66" title="Piano lessons">27</TD>
+                    <TD ALIGN=center>28</TD>
+                    <TD ALIGN=center>29</TD>
+                    </TR>
+                    <TR>
+                    <TD style="height:50px;" ALIGN=center>30</TD>
+                    <TD style="height:50px;" ALIGN=center>31</TD>
+                    <TD style="height:50px;" ALIGN=center></TD>
+                    <TD style="height:50px;" ALIGN=center></TD>
+                    <TD style="height:50px;" ALIGN=center></TD>
+                    <TD style="height:50px;" ALIGN=center></TD>
+                    <TD style="height:50px;" ALIGN=center></TD>
+
+                    </TR>
+                    </TABLE>
+
+                <h4>Customizeable by month</h4>
+            </div>
+            <div id="names">
+                <p style="font-size:30px;position:absolute;left:30vw;color:#993300;">template features</p>
+                <p>login</p>
+                <p>floating header</p>
+                <p>hamburger menu</p>
+                <p>scroll-friendly page</p>
+			</div>
+            <div id="discussion" style="align:center;background-color:#b3ffff;min-height:100vh;color:#0059b3;">
+                <h3 style="color:#007399"><br><br>Table</h3>
+
+                <div id="table" style="margin-left:auto;margin-right:auto;">
+
+                    <table style="background-color:#e6ffcc;margin-left:auto;margin-right:auto;width:20vw;border-collapse: separate;border-spacing: 70px 10px;text-size:25px;width:auto;text-align:left;">
+
+                        <tr><th class="penis" style="text-decoration:underline;padding-bottom:1vh;">Column 0</th><th class="vagina" style="text-decoration:underline;padding-bottom:1vh;">Column 1</th><th class="butt" style="text-decoration:underline;padding-bottom:1vh;">Column 2</th></tr>
+                        <!--<tr><th class="penis"></th><br><th class="vagina"><br></th><th class="butt"><br></th></tr>-->
+                        <tr><th class="penis"><br>...<br></th><th class="vagina">...</th><th class="butt">...</th></tr>
+                        <tr><th class="penis"><br>...</th><th class="vagina">...</th><th class="butt">...</th></tr>
+                        <tr><th class="penis"><br>...</th><th class="vagina">...</th><th class="butt">...</th></tr>
+                        <tr><th class="penis"><br>...</th><th class="vagina">...</th><th class="butt">...</th></tr>
+                        <tr><th class="penis"><br>...</th><th class="vagina">...</th><th class="butt">...</th></tr>
+                        <tr><th class="penis"><br></th><th class="vagina">...</th><th class="butt">...</th></tr>
+                        <tr><th class="penis"><br></th><th class="vagina"><br>...</th><th class="butt"></th></tr>
+                        <tr><th class="penis"><br></th><th class="vagina"><br>...</th><th class="butt"></th></tr>
+                        <tr><th class="penis"><br></th><th class="vagina"><br>...</th><th class="butt"></th></tr>
+                    </table>
+                </div>
+                <h4>Further guidelines:</h4>
+                <h5>Rule 1: <font size="1">(there are no rules!)</font> ...</h5>
+                    <h5>Rule 2: <font size="1">(there are no rules!)</font> ...</h5>
+            </div>
+
+
+        <div style="position:relative">
+            matthew keitelman, 2015
+        </div>
+        </div>
+
+    </body>
+
+</html>
