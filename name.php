@@ -88,7 +88,11 @@
 
     function login($cookie, $home, $userlist, $passlist) {
 
-        echo '<div id="container"><h1>' . $cookie . ' login.</h1><form name="login" method="POST" action="name.php"><input type="text" name="user"  value="mak2vr"><input type="password" name="pass" placeholder="password"><input type="submit" id="submit" name="submit" value="login"></form></div>';
+        echo '<div id="container"><h1>' . $cookie . ' login.</h1><form name="login" method="POST" action="name.php"><input type="text" name="user"  placeholder="user"><input type="password" name="pass" placeholder="password"><input type="submit" id="submit" name="submit" value="login"></form></div>';
+
+        if ($cookie == 'normal') {
+        echo '<h3>usr:normal,    pass:normal</h3>';
+        }
 
         if (isset($_POST['user'])) {
             $user_in = $_POST['user'];
@@ -99,7 +103,7 @@
                 if ($passlist[$index] == $pass_in) {
                     echo success;
                     $_SESSION[$cookie] = $user_in;
-                    header('Location:' . $home . '?' . rand());
+                    header('Location:' . $home . '?');
                 }
                 else {
                     echo "wrong password";

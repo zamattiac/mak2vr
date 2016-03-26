@@ -2,12 +2,12 @@
 
 <?php
     session_start();
-    if (!isset($_SESSION['user'])) {
+    if (!isset($_SESSION['user']) && !isset($_SESSION['normal'])) {
     header('Location: name.php');
     }
 ?>
 
-var compIDs = ['mak2vr','mpm5mh','iap5fk','kml4bz','bjm3j'];
+var compIDs = ['mak2vr','mpm5mh','iap5fk','kml4bz','bjm3j', 'normal'];
 var application = "";
 var language = "jack/";
 var d = false;
@@ -74,6 +74,9 @@ function checkCompID(user){
 function checkCookie() {
 
     var user = getCookie("username");
+    if (user == '') {
+        var user = getCookie('normal');
+    }
 
 
     if (user != "" && checkCompID(user)) {
@@ -103,7 +106,8 @@ function checkCookie() {
 
     else {
         setCookie("username","",1);
-        window.history.back();
+//        window.history.back();
+        alert('no cookie');
         }
 
 
@@ -317,7 +321,7 @@ function jack(display, input) {
         case "go":
         application = "go"
         if (splitCommand.length > 1){
-        var win = window.open("http://people.virginia.edu/~mak2vr/"+ second);
+        var win = window.open("http://people.virginia.edu/~mak2vr/mak2vr/"+ second);
         win.focus();}
         else {print("command pagename or 'files':")}
         break;
