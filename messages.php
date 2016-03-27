@@ -154,7 +154,7 @@ if (isset($_POST['message'])) {
 
     }
 
-
+echo 'messages not supported by this host';
 ?>
 </div>
 
